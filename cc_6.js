@@ -8,3 +8,17 @@ const calculateProfit = (costPrice, sellingPrice, unitsSold) => {
 // Test Cases 
 calculateProfit(50, 60,70);
 calculateProfit(35, 100, 230);
+
+
+// Task 2 Sales Tax 
+const calculateSalesTax = function (amount, taxRate) {
+    return amount * taxRate;
+};
+
+// Test Cases 
+let price = 450;
+let taxRate = 0.7;
+
+let taxAmount = calculateSalesTax(price,taxRate);
+console.log(`Tax Amount: $${taxAmount}`); 
+
