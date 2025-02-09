@@ -91,3 +91,16 @@ function createExpenseTracker () {
 let tracker = createExpenseTracker(); 
 console.log(tracker(350));
 console.log(tracker(200)); 
+
+// Task 8 Employee Promos 
+function calculateYearstoPromotion(employeeLevel){
+    if (employeeLevel >= 10){
+        return 0;
+    };
+    let years = (10 - employeeLevel) * 2;
+    return `Years to Level 10: ${years}`;
+};
+
+// Test Cases 
+console.log(calculateYearstoPromotion(8));
+console.log(calculateYearstoPromotion(6));
