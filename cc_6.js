@@ -37,3 +37,22 @@ const calculateBonus = (salary, performanceLevel) => {
 calculateBonus(7500, "Excellent");
 calculateBonus(5000, "Good");
 calculateBonus(2500, "Average");
+
+// Task 4 Subscription 
+const subscriptionCost = (plan, months, discount = 0) => {
+    const planRates = {
+        "Basic": 10,
+        "Premium": 20, 
+        "Enterprise": 30,
+    };
+    const monthlyRate = planRates[plan] || 0;
+    const totalCost = (monthlyRate * months) * (1-discount / 100);
+
+    console.log(`Total Subscription Cost: $${totalCost.toFixed(2)}`);
+    return totalCost;
+};
+
+// Test Cases 
+subscriptionCost("Basic", 7);
+subscriptionCost("Premium", 18, 6);
+subscriptionCost("Enterprise", 9, 11);
