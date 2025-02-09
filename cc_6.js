@@ -22,3 +22,18 @@ let taxRate = 0.7;
 let taxAmount = calculateSalesTax(price,taxRate);
 console.log(`Tax Amount: $${taxAmount}`); 
 
+// Task 3 Employee Bonus 
+const calculateBonus = (salary, performanceLevel) => {
+    const bonusRate = {
+        "Excellent": 0.20,
+        "Good": 0.10,
+        "Average": 0.05
+    };
+    const bonus = salary * (bonusRate[performanceLevel] || 0);
+    console.log(`Bonus: $${bonus.toFixed(2)}`);
+};
+
+// Test Cases 
+calculateBonus(7500, "Excellent");
+calculateBonus(5000, "Good");
+calculateBonus(2500, "Average");
