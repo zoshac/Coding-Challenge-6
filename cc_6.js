@@ -66,3 +66,14 @@ function convertCurrency (amount, exchangeRate) {
 // Test Cases 
 console.log(convertCurrency(1500, 2.2));
 console.log(convertCurrency(6000, 1.5));
+
+// Task 6 Bulk Orders 
+let orders = [700, 850, 900, 640, 500];
+
+let applyBulkDiscount = (orders, discountFunction) => {
+    let discountedOrders = orders.map(discountFunction);
+    console.log("Updated Orders:", discountedOrders)
+};
+
+// Test cases 
+applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
